@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">TrafficLights</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="textGreen">Зеленый</string>
+    <string name="textYellow">Желтый</string>
+    <string name="textRed">Красный</string>
+    <string name="textGreenAction">Движение разрешено!</string>
+    <string name="textColor">Цвет</string>
+    <string name="textYellowActionTV">Внимание!</string>
+    <string name="textRedActionTV">Стой!</string>
+    <string name="titleExit">Выход</string>
+    <string name="titleToolbar">Светофор</string>
+
+</resources>

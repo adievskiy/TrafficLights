@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TrafficLightsFragment"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/greenLightBTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textGreen"
+        android:textSize="22sp"
+        android:transitionName="greenButton"/>
+
+    <Button
+        android:id="@+id/yellowLightBTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textYellow"
+        android:textSize="22sp"
+        android:transitionName="yellowButton"/>
+
+    <Button
+        android:id="@+id/redLightBTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textRed"
+        android:textSize="22sp"
+        android:transitionName="redButton"/>
+
+</LinearLayout>
