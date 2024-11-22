@@ -3,8 +3,12 @@ package com.example.trafficlights
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
 import com.example.trafficlights.databinding.FragmentTrafficLightsBinding
@@ -24,6 +28,9 @@ class TrafficLightsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        (activity as AppCompatActivity).setSupportActionBar(binding.trafficLightsToolbar)
+        setHasOptionsMenu(true)
 
         binding.greenLightBTN.setOnClickListener {
             val text = binding.greenLightBTN.text.toString()
@@ -51,5 +58,18 @@ class TrafficLightsFragment : Fragment() {
             )
             findNavController().navigate(action, extras)
         }
+    }
+    @Deprecated("Deprecated in Java")
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu_item, menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    @Deprecated("Deprecated in Java")
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.exit -> requireActivity().finishAffinity()
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

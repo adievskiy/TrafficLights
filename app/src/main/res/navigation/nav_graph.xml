@@ -19,11 +19,20 @@
             app:popExitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_trafficLightsFragment_to_redFragment"
-            app:destination="@id/redFragment" />
+            app:destination="@id/redFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_trafficLightsFragment_to_yellowFragment"
-            app:destination="@id/yellowFragment" />
+            app:destination="@id/yellowFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
+
     <fragment
         android:id="@+id/greenFragment"
         android:name="com.example.trafficlights.GreenFragment"
@@ -35,6 +44,7 @@
             android:defaultValue="ApplicationAndroid" />
 
     </fragment>
+
     <fragment
         android:id="@+id/redFragment"
         android:name="com.example.trafficlights.RedFragment"

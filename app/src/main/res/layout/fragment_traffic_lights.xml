@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TrafficLightsFragment"
-    android:orientation="vertical"
-    android:gravity="center">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".TrafficLightsFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/trafficLightsToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/titleToolbar"/>
 
     <Button
         android:id="@+id/greenLightBTN"
@@ -13,7 +18,8 @@
         android:layout_height="wrap_content"
         android:text="@string/textGreen"
         android:textSize="22sp"
-        android:transitionName="greenButton"/>
+        android:transitionName="greenButton"
+        android:layout_centerInParent="true"/>
 
     <Button
         android:id="@+id/yellowLightBTN"
@@ -21,7 +27,8 @@
         android:layout_height="wrap_content"
         android:text="@string/textYellow"
         android:textSize="22sp"
-        android:transitionName="yellowButton"/>
+        android:transitionName="yellowButton"
+        android:layout_below="@id/greenLightBTN"/>
 
     <Button
         android:id="@+id/redLightBTN"
@@ -29,6 +36,7 @@
         android:layout_height="wrap_content"
         android:text="@string/textRed"
         android:textSize="22sp"
-        android:transitionName="redButton"/>
+        android:transitionName="redButton"
+        android:layout_below="@id/yellowLightBTN"/>
 
-</LinearLayout>
+</RelativeLayout>

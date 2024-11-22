@@ -3,9 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/yellow"
     android:orientation="vertical"
     tools:context=".YellowFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/yellowToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/titleToolbar"/>
 
     <TextView
         android:id="@+id/yellowTV"
